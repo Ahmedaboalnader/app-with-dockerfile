@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "jest --ci --reporters=default --reporters=jest-junit",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'No build step required for Node.js app'"
   },
   "author": "NJ",
   "license": "ISC",
@@ -15,4 +16,5 @@
     "jest-junit": "13.0.0"
   }
 }
+
 
