@@ -3,6 +3,8 @@ let path = require('path');
 let fs = require('fs');
 let app = express();
 
+// تحديد المنفذ بناءً على المتغير البيئي أو استخدام 80 كافتراضي
+const PORT = process.env.PORT || 80;
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
@@ -20,7 +22,6 @@ app.get('/profile-picture-ari', function (req, res) {
   res.end(img, 'binary');
 });
 
-app.listen(3000, function () {
-  console.log("app listening on port 3000!");
+app.listen(PORT, function () {
+  console.log(`App listening on port ${PORT}!`);
 });
-
